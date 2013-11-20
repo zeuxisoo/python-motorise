@@ -22,6 +22,7 @@ setup(
     install_requires=[
         'requests',
         'beautifulsoup4',
-        'pytidylib'
+        'pytidylib',
+        'urlnorm‎'
     ]
 )
