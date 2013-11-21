@@ -4,7 +4,7 @@
 from email.utils import parseaddr
 from setuptools import setup, find_packages
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 __author__ = 'Zeuxis Lo <seekstudio@gmail.com>'
 
 author, author_email = parseaddr(__author__)
