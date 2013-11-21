@@ -15,8 +15,8 @@ class Agent(object):
 
     def submit(self, form):
         if form.method.lower() == "get":
-            return self.session.get(form.action, data=form.fields)
+            response = self.session.get(form.action, data=form.fields)
         else:
             response = self.session.post(form.action, data=form.fields)
 
-            return Page(form.action, response, response.text, response.status_code, self)
+        return Page(form.action, response, response.text, response.status_code, self)
