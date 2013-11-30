@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from .base_suite import BaseSuite
-from motorise import Form
-from requests.models import Response
+from motorise import Form, Page
 
 class TestForm(BaseSuite):
     def test_load_hidden_fields(self):
@@ -28,4 +27,4 @@ class TestForm(BaseSuite):
         form.set_field('q', 'github')
         submit = form.submit()
 
-        self.assertIsInstance(submit, Response)
+        self.assertIsInstance(submit, Page)

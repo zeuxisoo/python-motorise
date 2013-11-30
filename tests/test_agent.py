@@ -2,7 +2,6 @@
 
 from .base_suite import BaseSuite
 from motorise import Page
-from requests.models import Response
 
 class TestAgent(BaseSuite):
     def test_get(self):
@@ -17,4 +16,4 @@ class TestAgent(BaseSuite):
         form.set_field("q", "github")
         submit = self.agent.submit(form)
 
-        self.assertIsInstance(submit, Response)
+        self.assertIsInstance(submit, Page)

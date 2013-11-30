@@ -3,7 +3,6 @@
 from .base_suite import BaseSuite
 from motorise import Page, Form, Link
 from bs4.element import Tag
-from requests.models import Response
 
 class TestPage(BaseSuite):
     def test_title(self):
@@ -41,7 +40,7 @@ class TestPage(BaseSuite):
         form   = page.form("form[name=f]")
         submit = form.submit()
 
-        self.assertIsInstance(submit, Response)
+        self.assertIsInstance(submit, Page)
 
     def test_links(self):
         page  = self.agent.get(self.url)
