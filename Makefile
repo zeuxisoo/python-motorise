@@ -24,3 +24,8 @@ create-dist: clean
 
 upload-dist:
 	@python setup.py sdist upload
+
+depend-graph:
+	@echo "from motorise import Agent; agent = Agent()" > temp.py
+	@pycallgraph --include "motorise*" graphviz --output-file=depend.png -- temp.py
+	@rm temp.py
