@@ -1,3 +1,7 @@
+### Status
+
+[![Build Status](https://travis-ci.org/zeuxisoo/python-motorise.png?branch=master)](https://travis-ci.org/zeuxisoo/python-motorise)
+
 ### Installation
 
 Create virtualenv
