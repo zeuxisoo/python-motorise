@@ -30,10 +30,12 @@ class TestPage(BaseSuite):
         self.assertIsInstance(select, Tag)
 
     def test_form(self):
-        page = self.agent.get(self.url)
-        form = page.form("form[name=f]")
+        page  = self.agent.get(self.url)
+        form1 = page.form("form[name=f]")
+        form2 = page.form("form", index=0)
 
-        self.assertIsInstance(form, Form)
+        self.assertIsInstance(form1, Form)
+        self.assertIsInstance(form2, Form)
 
     def test_submit(self):
         page   = self.agent.get(self.url)

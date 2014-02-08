@@ -37,8 +37,8 @@ class Page(object):
     def select(self, css_selector):
         return self.bs4_doc.select(css_selector)
 
-    def form(self, css_selector):
-        return Form(self, self.bs4_doc.select(css_selector)[0])
+    def form(self, css_selector, index=0):
+        return Form(self, self.bs4_doc.select(css_selector)[index])
 
     def submit(self, form):
         return self.agent.submit(form)
