@@ -69,3 +69,7 @@ class Page(object):
                 return link
 
         return None
+
+    def is_include(self, word):
+        return re.findall(word, self.html())
+

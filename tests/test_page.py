@@ -66,3 +66,9 @@ class TestPage(BaseSuite):
 
         self.assertIsInstance(name_regex, Link)
         self.assertIsInstance(link_regex, Link)
+
+    def test_is_include(self):
+        page = self.agent.get(self.url)
+
+        self.assertTrue(page.is_include("YouTube"))
+        self.assertTrue(page.is_include(u"地圖"))
