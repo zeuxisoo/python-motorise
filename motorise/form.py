@@ -2,7 +2,7 @@
 
 import re
 import sys
-import urlnorm
+from .utils import normalize_url
 
 class Form(object):
     def __init__(self, page, form):
@@ -13,7 +13,7 @@ class Form(object):
         self.method = self.form['method'] if self.form.has_attr('method') else "get"
         self.name   = self.form['name']  if self.form.has_attr('name') else ""
 
-        self.action = urlnorm.norm(self.page.url + self.action)
+        self.action = normalize_url(self.page.url, self.action)
 
         self.fields = dict()
         self.load_hidden_fields()
