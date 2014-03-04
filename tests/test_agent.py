@@ -17,3 +17,8 @@ class TestAgent(BaseSuite):
         submit = self.agent.submit(form)
 
         self.assertIsInstance(submit, Page)
+
+    def test_get_kwargs(self):
+        page = self.agent.get(self.url_verify_false, verify=False)
+
+        self.assertIsInstance(page, Page)
