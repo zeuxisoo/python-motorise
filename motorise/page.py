@@ -16,7 +16,7 @@ class Page(object):
         self.agent    = agent
 
         self.tidy_doc = tidy_document(body)[0]
-        self.bs4_doc  = BeautifulSoup(self.tidy_doc)
+        self.bs4_doc  = BeautifulSoup(self.tidy_doc, "html.parser")
 
         self.cached_links = []
 
