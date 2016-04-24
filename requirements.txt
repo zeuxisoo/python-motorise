@@ -1,4 +1,4 @@
-requests
-beautifulsoup4
-pytidylib
-pytest
+requests==2.9.1
+beautifulsoup4==4.4.1
+pytidylib==0.2.4
+pytest==2.9.1
