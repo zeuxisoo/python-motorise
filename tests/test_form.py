@@ -5,23 +5,23 @@ from motorise import Form, Page
 
 class TestForm(BaseSuite):
     def test_load_hidden_fields(self):
-        page = self.agent.get(self.url)
+        page = self.agent.get(self.url_google)
 
         form = page.form("form[name=f]")
 
         self.assertIsNotNone(form.fields)
 
     def test_set_field(self):
-        page = self.agent.get(self.url)
+        page = self.agent.get(self.url_google)
 
         form = page.form("form[name=f]")
         form.set_field('q', 'github')
 
         self.assertIn('q', form.fields)
-        self.assertEquals('github', form.fields['q'])
+        self.assertEqual('github', form.fields['q'])
 
     def test_submit(self):
-        page = self.agent.get(self.url)
+        page = self.agent.get(self.url_google)
 
         form   = page.form("form[name=f]")
         form.set_field('q', 'github')

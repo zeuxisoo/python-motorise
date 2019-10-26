@@ -3,5 +3,9 @@
 *.pyo
 *.egg
 *.egg-info
-dist
-venv
+
+.vscode
+
+/dist
+/venv
+/venv3

@@ -4,8 +4,8 @@ import re
 from bs4 import BeautifulSoup
 from tidylib import tidy_document
 
-from form import Form
-from link import Link
+from .form import Form
+from .link import Link
 
 class Page(object):
     def __init__(self, url, response, body, code, agent):
@@ -72,4 +72,3 @@ class Page(object):
 
     def is_include(self, word):
         return re.findall(word, self.html())
-

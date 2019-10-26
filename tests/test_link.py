@@ -4,19 +4,19 @@ from .base_suite import BaseSuite
 
 class TestLink(BaseSuite):
     def test_text(self):
-        page = self.agent.get(self.url)
-        link = page.find_link(name="YouTube")
+        page = self.agent.get(self.url_duckduckgo)
+        link = page.find_link(name="About DuckDuckGo Duck it!")
 
-        self.assertEquals(link.text(), "YouTube")
+        self.assertEqual(link.text(), "About DuckDuckGo Duck it!")
 
     def test_href(self):
-        page = self.agent.get(self.url)
-        link = page.find_link(link="http://www.youtube.com/?gl=HK&tab=w1")
+        page = self.agent.get(self.url_duckduckgo)
+        link = page.find_link(link="/about")
 
-        self.assertEquals(link.href(), "http://www.youtube.com/?gl=HK&tab=w1")
+        self.assertEqual(link.href(), "/about")
 
     def test_id(self):
-        page = self.agent.get(self.url)
-        link = page.find_link(name="YouTube")
+        page = self.agent.get(self.url_duckduckgo)
+        link = page.find_link(name="Learn More")
 
-        self.assertEquals(link.id(), "")
+        self.assertEqual(link.id(), "")

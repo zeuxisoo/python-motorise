@@ -1,11 +1,15 @@
 # -*- coding: utf-8 -*-
 
+import urllib3
 import requests
-
-from page import Page
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+from .page import Page
 
 class Agent(object):
     def __init__(self):
+        requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
         self.session = requests.Session()
 
     def get(self, url, **kwargs):

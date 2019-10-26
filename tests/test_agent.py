@@ -5,12 +5,12 @@ from motorise import Page
 
 class TestAgent(BaseSuite):
     def test_get(self):
-        page = self.agent.get(self.url)
+        page = self.agent.get(self.url_google)
 
         self.assertIsInstance(page, Page)
 
     def test_submit(self):
-        page = self.agent.get(self.url)
+        page = self.agent.get(self.url_google)
 
         form   = page.form("form[name=f]")
         form.set_field("q", "github")
