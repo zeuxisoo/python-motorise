@@ -6,11 +6,11 @@
 
 Create virtualenv
 
-	virtualenv --no-site-package venv
+	python3 -m venv venv3
 
 Activate virtuleenv
 
-	source venv/bin/activate
+	source venv3/bin/activate
 
 Install the motorise
 
