@@ -4,7 +4,7 @@
 from email.utils import parseaddr
 from setuptools import setup, find_packages
 
-__version__ = '0.1.7'
+__version__ = '0.2.0'
 __author__ = 'Zeuxis Lo <seekstudio@gmail.com>'
 
 author, author_email = parseaddr(__author__)
@@ -30,8 +30,8 @@ setup(
         "Intended Audience :: Developers",
         "License :: OSI Approved :: BSD License",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
         "Topic :: Internet",
         "Topic :: Internet :: WWW/HTTP",
         "Topic :: Internet :: WWW/HTTP :: Browsers"
